@@ -1,3 +1,46 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Spectral&display=swap");
+
+body {
+  font-family: "Spectral", serif;
+  font-size: 14px;
+  padding: 30px 10px;
+  font-weight: 400;
+}
+
+hr {
+  border-top: 1px dashed #888;
+}
+
+input,
+label,
+button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  position: relative;
+  background: #f7f5ed;
+  width: 500px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Spectral", serif;
+}
+
+label {
+  background: #fff;
+}
+
+button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #222;
+  position: relative;
+  background: #cccccc;
+  width: 75px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Spectral", serif;
+}
+
+button:hover {
+  background: #f7f5ed;
 }
