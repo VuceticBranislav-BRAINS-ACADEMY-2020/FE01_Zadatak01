@@ -20,7 +20,7 @@ function App() {
       {/* Version A */}
       <div>
         <label for="inputA">Verzija A:</label>
-        <input id="inputA" value="book"></input>
+        <input id="inputA" defaultValue="book"></input>
         <button onClick={versionA}>nađi</button> <br />
         <div id="OutputA"></div>
       </div>
@@ -29,7 +29,7 @@ function App() {
       {/* Version B */}
       <div>
         <label for="inputB">Verzija B:</label>
-        <input id="inputB" value="spoon"></input>
+        <input id="inputB" defaultValue="spoon"></input>
         <button onClick={versionB}>nađi</button> <br />
         <div id="OutputB"></div>
       </div>
@@ -38,7 +38,7 @@ function App() {
       {/* Version C */}
       <div>
         <label for="inputC">Verzija C:</label>
-        <input id="inputC" value="set"></input>
+        <input id="inputC" defaultValue="set"></input>
         <button onClick={versionC}>nađi</button> <br />
         <div id="OutputC"></div>
       </div>
