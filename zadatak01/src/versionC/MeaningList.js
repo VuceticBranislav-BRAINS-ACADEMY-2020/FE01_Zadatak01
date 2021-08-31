@@ -16,23 +16,44 @@ function MeaningList(p) {
     let word = p.aWord;
 
     // Find abravation of word type
-    let letter = definitions.partOfSpeech.charAt(0);
-    if (letter === "a") {
-        letter = definitions.partOfSpeech.slice(0, 3);
+    if (definitions.partOfSpeech === undefined) {
+        // Return List item that contains word and word tipe. It also contains list of definitions and examples
+        return (
+            <li className="MeaningList">
+                {" "}
+                <b className="MeaningList-b">{word}</b>
+                <ol type="a" className="MeaningList-ol">
+                    {definitions.definitions.map((x) => (
+                        <Meaning
+                            aDefinition={x.definition}
+                            aExample={x.example}
+                        />
+                    ))}
+                </ol>
+            </li>
+        );
+    } else {
+        // letter a mey represent adj. or adv.. in that case use 3 letters
+        let letter = definitions.partOfSpeech.charAt(0);
+        if (letter === "a") {
+            letter = definitions.partOfSpeech.slice(0, 3);
+        }
+        // Return List item that contains word and word tipe. It also contains list of definitions and examples
+        return (
+            <li className="MeaningList">
+                {" "}
+                <b className="MeaningList-b">{word}</b>, {letter}.
+                <ol type="a" className="MeaningList-ol">
+                    {definitions.definitions.map((x) => (
+                        <Meaning
+                            aDefinition={x.definition}
+                            aExample={x.example}
+                        />
+                    ))}
+                </ol>
+            </li>
+        );
     }
-
-    // Return List item that contains word and word tipe. It also contains list of definitions and examples
-    return (
-        <li className="MeaningList">
-            {" "}
-            <b className="MeaningList-b">{word}</b>, {letter}.
-            <ol type="a" className="MeaningList-ol">
-                {definitions.definitions.map((x) => (
-                    <Meaning aDefinition={x.definition} aExample={x.example} />
-                ))}
-            </ol>
-        </li>
-    );
 }
 
 export { MeaningList };
